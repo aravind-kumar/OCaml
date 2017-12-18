@@ -1,0 +1,10 @@
+1.
+  int,int,int,bool,bool,bool,bool,bool,char,error.
+2.Operators are left associative
+3.It evaluates to 11 because * has more precedence when compared to +
+  Hence 2*3 is evaluated first.
+  I would advice to add () around 1+2 and 3+4
+4.max_int and min_int are the max_int which can be stored and min_int is the minimum number stored.
+  max_int + 1  = min_int
+  min_int - 1 = max_int
+5.It would throw an error because we are dividing by 0 which is invalid division.
