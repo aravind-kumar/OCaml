@@ -10,6 +10,11 @@
 
 (* <> is the not equal to opearator*)
 
+
+(* opeartors are left associative*)
+
+(* && has higher precendece than || *)
+
 if 100<99
 then true
 else false;;
