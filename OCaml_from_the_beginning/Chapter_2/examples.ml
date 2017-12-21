@@ -30,3 +30,24 @@ let is_vowel c =
 (*Similar to writing the is_negative2 just return the same function*)
 
 
+(*Function which takes 2 arguments*)
+
+let addtoten arg1 arg2 = arg1 + arg2 + 10;;
+
+(*( ) are to placed on those which are functions*)
+
+
+(* Recursice function has the rec keyword*)
+
+let rec fact arg =
+  if (arg = 1)
+  then 1
+  else arg * fact(arg -1);;
+
+(*Instead of if else statements we can also use pattern matching *)
+
+(*Syntax is match arg with case 1 | case2 the special symbol _ means anything else *)
+let rec fact2 arg =
+  match arg with
+    1-> 1
+  | _ -> arg * fact(arg - 1);;
