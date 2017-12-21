@@ -21,3 +21,12 @@ hello_world ();;
 let is_negative arg = if arg < 0
   then true
   else false;;
+
+let is_negative2 arg = arg<0;;
+
+let is_vowel c =
+  c='a' || c='e' || c='i' || c='o' || c='u' ;;
+
+(*Similar to writing the is_negative2 just return the same function*)
+
+
