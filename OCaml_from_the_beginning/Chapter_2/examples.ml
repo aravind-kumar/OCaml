@@ -51,3 +51,20 @@ let rec fact2 arg =
   match arg with
     1-> 1
   | _ -> arg * fact(arg - 1);;
+
+
+(*GCD of two numbers*)
+
+let rec gcd arg1 arg2 =
+  if (arg2 = 0)
+  then arg1
+  else gcd arg2 (arg1 mod arg2);;
+
+
+(*GCD with pattern matching*)
+
+let rec gcd2 arg1 arg2 =
+  match arg2 with
+    0 -> arg1
+  | _ -> gcd arg2 (arg1 mod arg2);;
+
