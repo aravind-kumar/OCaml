@@ -30,3 +30,12 @@ let rec pow2 base exp =
   | exp when ((exp mod 2) = 0) ->
     pow2 (base*base) (exp/2)
   | _ -> base * pow2 (base*base) (exp/2);;
+
+let isvowel arg1 =
+  match arg1 with
+  'a' | 'e' | 'i' | 'o' | 'u' -> true
+      | _ -> false;;
+
+let isconsonant arg1 =
+  not (isvowel arg1);;
+
