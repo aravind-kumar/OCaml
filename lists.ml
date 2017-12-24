@@ -3,6 +3,7 @@
 (*However lists would have to be seperated by semicolonns*)
 let list1 = [1;2;3;4];;
 
-let list2 = ["Ab";"B","C","D"];;
+let list2 = ["Ab" ;"BC";"C";"D"];;
 
+List.length list2;;
 List.map list2 ~f:String.length;;
