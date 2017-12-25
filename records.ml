@@ -9,3 +9,9 @@ let newPoint = {x=2.; y=3.};;
 
 (*Note that we use the same notation as that of the record {} to declare a new object of the type*)
 (* Semilcons are used to seperate fields*)
+
+(*We can also use pattern matching to the filed values here*)
+
+let distanceFromOrigin {x;y} = sqrt((x**2.) +. (y**2.));;
+
+let newDistance = distanceFromOrigin {x=2.; y=3.};;
