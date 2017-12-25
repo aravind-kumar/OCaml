@@ -46,6 +46,15 @@ let rec getLastButOne givenList =
   | [first ; second] -> Some first
   | _::rest -> getLastButOne rest;;
 
+let rec getKthElement k givenList =
+  if k=0
+  then []
+  else if k=1
+  then givenList
+  else getKthElement (k-1) givenList;;
+
+
+getKthElement 3 [1;2;3;4;5;6];;
 
 
                  
