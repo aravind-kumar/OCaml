@@ -46,3 +46,18 @@ let getSecond givenList =
 getSecond list4;;
 
 (*Here we are using pattern matching to get the second element of the list which is named as second*)
+
+let rec getKthElement1 k list =
+  match list with
+    [] -> None
+  | h::t -> if k=1 then Some h else getKthElement1 (k-1) t;;
+
+let rec getKthElement2 k = function
+  | [] -> None
+  | h::t -> if k=1 then Some h else getKthElement2 (k-1) t;;
+
+let rec getKthElement = function
+  | [],_ -> None
+  | _, n when n < 0 -> raise (Invalid_argument "get_nth")
+  | h::_,0 -> Some h
+  | h::t,k -> getKthElement(t,(k-1));;
