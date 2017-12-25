@@ -32,3 +32,10 @@ let distanceFromOrigin3 v1 = sqrt((v1.x ** 2.) +. (v1.y ** 2.));;
 
 let newDistance3 = distanceFromOrigin3 {x=2.; y=3.};;
 
+
+let rec getLastElement givenList =
+  match givenList with
+    [first] -> Some first
+  | [] -> None
+  | first::rest -> getLastElement rest;;
+
