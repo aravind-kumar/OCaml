@@ -31,3 +31,11 @@ Easy
 
 4.Add ocaml to the layers list.
 
+5.Add the following to the ocamlinit file
+#use "topfind"
+#thread
+#camlp4o
+#require "core.top"
+#require "core.syntax"
+open Core.Std
+
