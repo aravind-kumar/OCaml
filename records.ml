@@ -28,3 +28,7 @@ let newDistance2 = distanceFromOrigin2 {x=2.; y=3.};;
 
 (*Method 3 for pattern matching*)
 
+let distanceFromOrigin3 v1 = sqrt((v1.x ** 2.) +. (v1.y ** 2.));;
+
+let newDistance3 = distanceFromOrigin3 {x=2.; y=3.};;
+
