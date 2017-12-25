@@ -39,3 +39,13 @@ let rec getLastElement givenList =
   | [] -> None
   | first::rest -> getLastElement rest;;
 
+
+let rec getLastButOne givenList =
+  match givenList with
+    [] -> None
+  | [first ; second] -> Some first
+  | _::rest -> getLastButOne rest;;
+
+
+
+                 
