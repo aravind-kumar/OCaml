@@ -38,10 +38,9 @@ getFirst list4;;
 let getSecond givenList =
   match givenList with
     first::second::rest -> second
-  |
-    [] -> "Empty list"
-  |
-    [first] -> first;;
+  | [] -> "Empty list"
+  | [first] -> first;;
+ 
 
 getSecond list4;;
 
@@ -81,3 +80,20 @@ let reverseList list =
 
 
 reverseList [1;2;3;4];;
+
+
+let isPalindrome list =
+  let reverse = reverseList list in reverse = list;;
+
+isPalindrome [1;1];;
+
+
+let eliminateConsecutiveDups list =
+  let rec elimConsecutiveDups outlist list =
+    match list with
+      [] -> outlist 
+    | h::second::t when (h=second) -> elimConsecutiveDups (h::outlist) t
+    | h::second::t when (h!=second) -> elimConsecutiveDups (h::second::outlist) t
+    | h::t when (h<>t) -> h::t::outlist
+    | h::t when (h=t) -> h::outlist
+  in elimConsecutiveDups [] list ;;
