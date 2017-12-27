@@ -61,3 +61,23 @@ let rec getKthElement = function
   | _, n when n < 0 -> raise (Invalid_argument "get_nth")
   | h::_,0 -> Some h
   | h::t,k -> getKthElement(t,(k-1));;
+
+let getLength list =
+  let rec getLenghtRec k list =
+    match list with
+      [] -> k
+    | h::t -> getLenghtRec (k+1) t
+  in getLenghtRec 0 list;;
+
+getLength [1;2;3;4];;
+
+
+let reverseList list =
+  let rec reverseListRec outList inList =
+    match inList with
+      [] -> outList
+    | h::t -> reverseListRec (h::outList) t
+  in reverseListRec [] list;;
+
+
+reverseList [1;2;3;4];;
