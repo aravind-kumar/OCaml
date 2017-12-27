@@ -87,13 +87,12 @@ let isPalindrome list =
 
 isPalindrome [1;1];;
 
-
-let eliminateConsecutiveDups list =
-  let rec elimConsecutiveDups outlist list =
+let rec compressRec list =
     match list with
-      [] -> outlist 
-    | h::second::t when (h=second) -> elimConsecutiveDups (h::outlist) t
-    | h::second::t when (h!=second) -> elimConsecutiveDups (h::second::outlist) t
-    | h::t when (h<>t) -> h::t::outlist
-    | h::t when (h=t) -> h::outlist
-  in elimConsecutiveDups [] list ;;
+     first::second::rest ->
+      if first = second
+      then compressRec (second::rest)
+      else [first] @ compressRec (second::rest)
+      | [first] -> [first]
+      |  [] -> [] ;;
+
