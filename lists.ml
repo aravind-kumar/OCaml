@@ -102,3 +102,10 @@ let rec duplicate list =
     [] -> []
   |
     first::rest -> (first::[first]) @ duplicate rest;;
+
+let  split list num =
+  let rec splitrec acc list num =
+    match list with
+      [] -> acc
+    | h::t -> if num = 0 then acc else splitrec (h::acc) t (num-1)
+  in splitrec [] list num;;
