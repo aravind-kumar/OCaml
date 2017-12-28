@@ -96,3 +96,9 @@ let rec compressRec list =
       | [first] -> [first]
       |  [] -> [] ;;
 
+
+let rec duplicate list =
+  match list with
+    [] -> []
+  |
+    first::rest -> (first::[first]) @ duplicate rest;;
