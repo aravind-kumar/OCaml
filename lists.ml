@@ -116,3 +116,8 @@ let rec removeKthElement k list =
   match list with
     [] -> []
   | h::t -> if k=0 then t else h::removeKthElement (k-1) t;;
+
+let rec insertAtK k elem list =
+  match list with
+    [] -> [k]
+  | h::t as l -> if k=0 then elem::l else h::insertAtK (k-1) elem t;;
