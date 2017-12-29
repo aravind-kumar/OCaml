@@ -121,3 +121,10 @@ let rec insertAtK k elem list =
   match list with
     [] -> [k]
   | h::t as l -> if k=0 then elem::l else h::insertAtK (k-1) elem t;;
+
+let range start endrange =
+  let rec rangeHelper start endrange outlist =
+    if start = endrange then outlist @ [start]
+    else rangeHelper (start+1) endrange (outlist @ [start])
+  in rangeHelper start endrange [];;
+  
