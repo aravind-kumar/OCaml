@@ -109,3 +109,10 @@ let  split list num =
       [] -> acc
     | h::t -> if num = 0 then acc else splitrec (h::acc) t (num-1)
   in splitrec [] list num;;
+
+
+
+let rec removeKthElement k list =
+  match list with
+    [] -> []
+  | h::t -> if k=0 then t else h::removeKthElement (k-1) t;;
