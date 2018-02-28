@@ -96,7 +96,6 @@ let rec compressRec list =
       | [first] -> [first]
       |  [] -> [] ;;
 
-
 let rec duplicate list =
   match list with
     [] -> []
@@ -109,7 +108,6 @@ let  split list num =
       [] -> acc
     | h::t -> if num = 0 then acc else splitrec (h::acc) t (num-1)
   in splitrec [] list num;;
-
 
 
 let rec removeKthElement k list =
@@ -127,4 +125,4 @@ let range start endrange =
     if start = endrange then outlist @ [start]
     else rangeHelper (start+1) endrange (outlist @ [start])
   in rangeHelper start endrange [];;
-  
+
